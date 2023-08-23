@@ -49,9 +49,36 @@ A Node.js web application that allows users to search for movies and TV shows, m
 
 ### Configuration
 
-1. Rename the `.env.example` file to `.env`.
+1. **Make .env File**: Make a new file named as `.env`.
 
-2. Open the `.env` file and add your API keys, database connection details, or any other necessary environment variables.
+2. **Add Your API Key**: Open the `.env` file in a text editor and locate the line `API_KEY=`. Replace the empty value with your actual API key. For example:
+
+   ```env
+   API_KEY=your_api_key_here
+   ```
+
+   Replace `your_api_key_here` with your real API key.
+
+3. **Database Connection**: Provide the necessary details for your database connection:
+
+   - `DB_HOST`: The hostname or IP address of your database server.
+   - `DB_USER`: The username used to connect to the database.
+   - `DB_PASS`: The password for the database user.
+   - `DB_NAME`: The name of the database you'll be using.
+
+   For example:
+
+   ```env
+   DB_HOST=localhost
+   DB_USER=username
+   DB_PASS=password
+   DB_NAME=database_name
+   ```
+
+   Replace `localhost`, `username`, `password`, and `database_name` with your actual database connection details.
+
+4. **Save Changes**: Save the changes you made to the `.env` file.
+
 
 ## Usage
 
@@ -68,5 +95,6 @@ A Node.js web application that allows users to search for movies and TV shows, m
 4. Navigate to the "View Favorite Movies" page to see your list of favorite movies.
 
 # Screenshots
-
-Will add in few minutes
+![Home Page sreenshot](./screenshots/1.png) 
+![Search Page sreenshot](./screenshots/2.png) 
+![Favorite Page sreenshot](./screenshots/3.png) 
