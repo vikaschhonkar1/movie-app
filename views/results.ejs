@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .list-group-item {
+            border: none;
+            background-color: #f8f9fa;
+        }
+
+        .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+
+        .movie-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .movie-year-type {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .favorite-button {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .favorite-button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .go-to-favorites {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between">
+            <h1 class="mb-4">Movie List</h1>
+            <a href="/favorites" class="btn btn-primary go-to-favorites">Go to Favorite Movies</a>
+        </div>
+        <ul class="list-group">
+            <% for(let i=0; i < movies.length; i++) { %>
+                <li class="list-group-item mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img src="<%= movies[i].Poster %>" alt="<%= movies[i].Title %> Poster"
+                                class="img-fluid mr-3" style="max-width: 120px;">
+                            <div>
+                                <h2 class="movie-title">
+                                    <%= movies[i].Title %>
+                                </h2>
+                                <p class="movie-year-type">Year: <%= movies[i].Year %> | Type: <%= movies[i].Type %>
+                                </p>
+                            </div>
+                        </div>
+                        <form method="POST" action="/favorites">
+                            <input type="hidden" name="title" value="<%= movies[i].Title %>">
+                            <input type="hidden" name="year" value="<%= movies[i].Year %>">
+                            <input type="hidden" name="poster" value="<%= movies[i].Poster %>">
+                            <input type="hidden" name="type" value="<%= movies[i].Type %>">
+                            <button type="submit" class="btn btn-primary favorite-button">Favorite</button>
+                        </form>
+                    </div>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

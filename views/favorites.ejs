@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 1px solid #d1d1d1;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        img {
+            margin-right: 15px;
+        }
+
+        strong {
+            font-size: 18px;
+        }
+
+        .go-to-home {
+            position: absolute;
+            top: 20px;
+            right: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="btn btn-primary go-to-home">Go to Home Page</a>
+        <h1 class="mb-4">Favorites</h1>
+        <ul>
+            <% favorites.forEach((favorite)=> { %>
+                <li>
+                    <img src="<%= favorite.poster %>" alt="Movie Poster" width="100" height="150">
+                    <div>
+                        <strong>
+                            <%= favorite.title %>
+                        </strong> (<%= favorite.year %>) - <%= favorite.type %>
+                    </div>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
