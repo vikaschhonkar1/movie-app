@@ -3,8 +3,7 @@
 
 A Node.js web application that allows users to search for movies and TV shows, mark their favorite movies, and view a list of their favorite movies.
 
-![Screenshot](screenshot.png) <!-- Add a screenshot of your app -->
-
+![Screenshot](screenshot.png) 
 ## Features
 
 - Search for movies and TV shows using an external API.
@@ -20,8 +19,7 @@ A Node.js web application that allows users to search for movies and TV shows, m
   - [Installation](#installation)
   - [Configuration](#configuration)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Screenshots](#screenshots)
 
 ## Getting Started
 
@@ -34,7 +32,7 @@ A Node.js web application that allows users to search for movies and TV shows, m
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/movie-search-app.git
+   git clone https://github.com/vikaschhonkar1/movie-search-app.git
    ```
 
 2. Navigate to the project directory:
@@ -69,3 +67,6 @@ A Node.js web application that allows users to search for movies and TV shows, m
 
 4. Navigate to the "View Favorite Movies" page to see your list of favorite movies.
 
+# Screenshots
+
+Will add in few minutes
